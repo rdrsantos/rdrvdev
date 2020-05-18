@@ -61,6 +61,7 @@ body {
 @media only screen and (max-width: 700px) {
   .check-mobi {
     display: block;
+    color: #F9F8F8;
   }
 }
 
@@ -90,25 +91,21 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
     margin: auto;
     top: 64px;
-    left: 0;
-    background-color: #222;
+    left: 100%;
+    background-color: #000666;
     text-align: center;
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    border-top: 2px solid #F9F8F8;
   }
 }
 
 .header input:checked ~ .menu {
-  height: auto;
-  visibility: visible;
-  opacity: 1;
+  left: 0;
 }
 
 .menu li a {
