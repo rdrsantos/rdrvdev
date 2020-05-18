@@ -20,6 +20,7 @@ a {
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,19 +51,20 @@ body {
   position: fixed;
 }
 
-.header input {
-  display: none;
-}
-
-.check-mobi {
+.check-mobi i {
   display: none;
 }
 
 @media only screen and (max-width: 700px) {
-  .check-mobi {
+  .check-mobi i {
     display: block;
     color: #F9F8F8;
+    font-size: 1.5em;
   }
+}
+
+.header input {
+  display: none;
 }
 
 .logo {
@@ -92,10 +94,10 @@ body {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
     position: absolute;
-    width: 100%;
+    width: 130px;
     margin: auto;
     top: 64px;
-    left: 100%;
+    left: -100%;
     background-color: #000666;
     text-align: center;
     -webkit-transition: all .3s ease-in;
@@ -139,7 +141,7 @@ body {
 
 @media only screen and (max-width: 700px) {
   .menu li a {
-    padding: 20px;
+    padding: 10px;
   }
 }
 
@@ -159,6 +161,12 @@ body {
   font-size: 1.25em;
 }
 
+@media only screen and (max-width: 700px) {
+  .intro p {
+    font-size: 1.125em;
+  }
+}
+
 .intro h1 {
   font-family: 'Squada One', cursive;
   font-size: 5.5em;
@@ -167,11 +175,18 @@ body {
   margin-bottom: 60px;
 }
 
+@media only screen and (max-width: 700px) {
+  .intro h1 {
+    font-size: 3em;
+  }
+}
+
 .btn {
   padding: 15px 50px;
   border: none;
   border-radius: 5px;
   background-color: #F9F8F8;
+  text-align: center;
   color: #222;
   font-family: 'Arial', sans-serif;
   font-size: .875em;
@@ -184,4 +199,11 @@ body {
 .btn:hover {
   -webkit-box-shadow: 0px 0px 5px #F9F8F8;
           box-shadow: 0px 0px 5px #F9F8F8;
+}
+
+@media only screen and (max-width: 700px) {
+  .btn {
+    width: 150px;
+    margin-bottom: 10px;
+  }
 }
