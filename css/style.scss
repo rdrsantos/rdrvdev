@@ -17,6 +17,7 @@ body{
         display: block;
         color: $white;
         font-size: 1.5em;
+        padding: 5px 10px;
     }
 }
 .header input{
@@ -41,12 +42,12 @@ body{
         position: absolute;
         width: 130px;
         margin: auto;
-        top: 64px;
+        top: 48px;
         left: -100%;
         background-color: $mainColor;
         text-align: center;
         transition: all .3s ease-in;
-        border-top: 2px solid $white;
+        border: 2px solid $white;
     }
 }
 .header input{
@@ -239,6 +240,11 @@ body{
     box-shadow: 0 0 0 5px $mainColor;
     margin: 10px;
     cursor: pointer;
+    @include mobile{
+        width: 120px;
+        height: 80px;
+        padding: 10px;
+    }
 }
 .projetos-item img{
     margin: 0 auto;

@@ -87,6 +87,7 @@ body {
     display: block;
     color: #F9F8F8;
     font-size: 1.5em;
+    padding: 5px 10px;
   }
 }
 
@@ -127,13 +128,13 @@ body {
     position: absolute;
     width: 130px;
     margin: auto;
-    top: 64px;
+    top: 48px;
     left: -100%;
     background-color: #000666;
     text-align: center;
     -webkit-transition: all .3s ease-in;
     transition: all .3s ease-in;
-    border-top: 2px solid #F9F8F8;
+    border: 2px solid #F9F8F8;
   }
 }
 
@@ -425,6 +426,14 @@ body {
           box-shadow: 0 0 0 5px #000666;
   margin: 10px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .projetos-item {
+    width: 120px;
+    height: 80px;
+    padding: 10px;
+  }
 }
 
 .projetos-item img {
