@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
 *{
     margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;
 }
@@ -9,9 +10,7 @@ a{
     font-style: none;
     text-decoration: none;
 }
-@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
-
-
+// Reponsivo
 @mixin mobile {
     @media only screen and (max-width:700px){
         @content;
@@ -24,38 +23,46 @@ $white: #F9F8F8;
 $black: #222;
 
 // fontes
+@function em($px, $con: 16){
+    @return ($px / $con) * 1em;
+}
+
 @mixin mainFont {
     font-family: 'Squada One', cursive;
-    font-size: 5.5em; // 70px
+    font-size: em(88); //
     text-transform: uppercase;
     color: $white;
     @include mobile{
         font-size: 3em;
     }
 }
-@mixin textFont {
+@mixin textFont($size:14) {
     font-family: 'Arial', sans-serif;
-    font-size: .875em; // 14px
-    line-height: 1.4em;
+    font-size: em($size);
+    line-height: em(25, $size);
 }
-@mixin title($color) {
+@mixin title($color: $black) {
     font-family: 'Squada One', cursive;
-    font-size: 2.25em; // 36px
-    text-align: center;
+    font-size: em(36);
     position: relative;
+    margin: 0 auto;
+    margin-bottom: 60px;
     color: $color;
+    display: flex;
+    justify-content: center;
         &::after{
             content: '';
             width: 50px;
+            display: block;
             height: 5px;
             position: absolute;
-            margin: 10px auto;
+            bottom: -10px;
             background-color: currentColor;
         }
 }
 
 // backgrounds
-@mixin background($color, $padding:10px 0){
+@mixin background($padding:10px 0, $color: $white){
     width: 100%;
     padding: $padding;
     background-color: $color;
@@ -65,8 +72,8 @@ $black: #222;
 @mixin container($width) {
     max-width: $width;
     margin: 0 auto;
-    padding: 0 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     @include mobile{
@@ -77,4 +84,7 @@ $black: #222;
 }
 .container{
     @include container(1000px);
+}
+.title{
+    @include title;
 }
