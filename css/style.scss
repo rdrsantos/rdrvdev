@@ -230,13 +230,16 @@ body{
 }
 
 .projetos-item{
+    display: flex;
+    align-items: center;
     width: 300px;
+    height: 150px;
     background-color: $mainColor;
     border: 5px solid $white;
     box-shadow: 0 0 0 5px $mainColor;
     margin: 10px;
+    cursor: pointer;
 }
 .projetos-item img{
     margin: 0 auto;
-    padding: 70px 0;
 }

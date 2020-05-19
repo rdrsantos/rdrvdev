@@ -411,15 +411,22 @@ body {
 }
 
 .projetos-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 300px;
+  height: 150px;
   background-color: #000666;
   border: 5px solid #F9F8F8;
   -webkit-box-shadow: 0 0 0 5px #000666;
           box-shadow: 0 0 0 5px #000666;
   margin: 10px;
+  cursor: pointer;
 }
 
 .projetos-item img {
   margin: 0 auto;
-  padding: 70px 0;
 }
