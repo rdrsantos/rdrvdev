@@ -1,0 +1,80 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+a{
+    font-style: none;
+    text-decoration: none;
+}
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
+
+@mixin mobile {
+    @media only screen and (max-width:700px){
+        @content;
+    }
+}
+
+// cores
+$mainColor: #000666;
+$white: #F9F8F8;
+$black: #222;
+
+// fontes
+@mixin mainFont {
+    font-family: 'Squada One', cursive;
+    font-size: 5.5em; // 70px
+    text-transform: uppercase;
+    color: $white;
+    @include mobile{
+        font-size: 3em;
+    }
+}
+@mixin textFont {
+    font-family: 'Arial', sans-serif;
+    font-size: .875em; // 14px
+    line-height: 1.4em;
+}
+@mixin title($color) {
+    font-family: 'Squada One', cursive;
+    font-size: 2.25em; // 36px
+    text-align: center;
+    position: relative;
+    color: $color;
+        &::after{
+            content: '';
+            width: 50px;
+            height: 5px;
+            position: absolute;
+            margin: 10px auto;
+            background-color: currentColor;
+        }
+}
+
+// backgrounds
+@mixin background($color, $padding:10px 0){
+    width: 100%;
+    padding: $padding;
+    background-color: $color;
+}
+
+
+@mixin container($width) {
+    max-width: $width;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile{
+        max-width: 300px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.container{
+    @include container(1000px);
+}
