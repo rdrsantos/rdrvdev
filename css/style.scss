@@ -220,3 +220,23 @@ body{
 .tec-item img{
     margin: 50px auto;
 }
+
+//projetos
+.projetos{
+    @include background(100px 0);
+}
+.projetos .container{
+    justify-content: center;
+}
+
+.projetos-item{
+    width: 300px;
+    background-color: $mainColor;
+    border: 5px solid $white;
+    box-shadow: 0 0 0 5px $mainColor;
+    margin: 10px;
+}
+.projetos-item img{
+    margin: 0 auto;
+    padding: 70px 0;
+}

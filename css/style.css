@@ -397,3 +397,29 @@ body {
 .tec-item img {
   margin: 50px auto;
 }
+
+.projetos {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #F9F8F8;
+}
+
+.projetos .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projetos-item {
+  width: 300px;
+  background-color: #000666;
+  border: 5px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 5px #000666;
+          box-shadow: 0 0 0 5px #000666;
+  margin: 10px;
+}
+
+.projetos-item img {
+  margin: 0 auto;
+  padding: 70px 0;
+}
