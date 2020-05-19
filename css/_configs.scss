@@ -27,9 +27,9 @@ $black: #222;
     @return ($px / $con) * 1em;
 }
 
-@mixin mainFont {
+@mixin mainFont($size:88) {
     font-family: 'Squada One', cursive;
-    font-size: em(88); //
+    font-size: em($size); //
     text-transform: uppercase;
     color: $white;
     @include mobile{

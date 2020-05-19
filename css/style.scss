@@ -200,12 +200,23 @@ body{
 }
 
 .tec-item{
-    width: 320px;
+    width: 310px;
     text-align: center;
     border: 5px solid $white;
+    margin: 0 10px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .tec-item h3{
-    @include textFont()
+    @include mainFont(30);
+    padding: 10px 0;
+    border-bottom: 5px solid $white;
+    @include mobile{
+        font-size: em(26, 16);
+    }
+}
+
+.tec-item img{
+    margin: 50px auto;
 }
