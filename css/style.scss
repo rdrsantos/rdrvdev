@@ -256,12 +256,13 @@ body{
         position: fixed;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .7);
         display: none;
         justify-content: center;
         align-items: center;
         animation-name: down;
         animation-duration: .5s;
+        z-index: 1000;
     }
 }
 
@@ -342,6 +343,7 @@ body{
         color: $white;
         font-weight: bold;
         cursor: pointer;
+        outline: none;
         @include mobile{
             padding: 5px;
             top: -10px;
