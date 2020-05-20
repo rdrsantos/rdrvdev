@@ -188,7 +188,6 @@ body{
 
 .sobre-img{
     border: 5px solid $mainColor;
-    border-radius: 5px;
     margin: 0 10px;
 }
 
@@ -205,7 +204,7 @@ body{
     text-align: center;
     border: 5px solid $white;
     margin: 0 10px;
-    border-radius: 5px;
+
     margin-bottom: 20px;
 }
 
@@ -250,16 +249,31 @@ body{
     margin: 0 auto;
 }
 //modal
-.modal-container{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@for $i from 1 through 6{
+    .modal-container-#{$i}{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .5);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        animation-name: down;
+        animation-duration: .5s;
+    }
+}
+
+@keyframes down{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    } 
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 .modal-on{
     display: flex;
@@ -275,6 +289,9 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    @include mobile{
+        width: 80%;
+    }
 }
 .modal-img{
     background-color: $mainColor;
@@ -289,6 +306,10 @@ body{
     @include textFont(26);
     margin: 20px 0 5px 0;
 }
+.modal-txt p{
+    text-align: left;
+    max-width: 600px;
+}
 
 .modal .btn{
     background-color: $mainColor;
@@ -300,15 +321,22 @@ body{
     border-radius: 0;
 }
 
-.btn-close{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 10px;
-    background-color: $mainColor;
-    border: 3px solid $white;
-    box-shadow: 0 0 0 3px $mainColor;
-    color: $white;
-    font-weight: bold;
-    cursor: pointer;
+@for $i from 1 through 6{
+    .btn-close-#{$i}{
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        padding: 10px;
+        background-color: $mainColor;
+        border: 3px solid $white;
+        box-shadow: 0 0 0 3px $mainColor;
+        color: $white;
+        font-weight: bold;
+        cursor: pointer;
+        @include mobile{
+            padding: 5px;
+            top: -10px;
+            right: -10px;
+        }
+    }
 }

@@ -330,7 +330,6 @@ body {
 
 .sobre-img {
   border: 5px solid #000666;
-  border-radius: 5px;
   margin: 0 10px;
 }
 
@@ -370,7 +369,6 @@ body {
   text-align: center;
   border: 5px solid #F9F8F8;
   margin: 0 10px;
-  border-radius: 5px;
   margin-bottom: 20px;
 }
 
@@ -440,22 +438,150 @@ body {
   margin: 0 auto;
 }
 
-.modal-container {
+.modal-container-1 {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation-name: down;
+          animation-name: down;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.modal-container-2 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: down;
+          animation-name: down;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.modal-container-3 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: down;
+          animation-name: down;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.modal-container-4 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: down;
+          animation-name: down;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.modal-container-5 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: down;
+          animation-name: down;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+.modal-container-6 {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation-name: down;
+          animation-name: down;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+@-webkit-keyframes down {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes down {
+  from {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .modal-on {
@@ -483,6 +609,12 @@ body {
   text-align: center;
 }
 
+@media only screen and (max-width: 700px) {
+  .modal {
+    width: 80%;
+  }
+}
+
 .modal-img {
   background-color: #000666;
   padding: 20px;
@@ -504,6 +636,11 @@ body {
   margin: 20px 0 5px 0;
 }
 
+.modal-txt p {
+  text-align: left;
+  max-width: 600px;
+}
+
 .modal .btn {
   background-color: #000666;
   color: #F9F8F8;
@@ -515,10 +652,10 @@ body {
   border-radius: 0;
 }
 
-.btn-close {
+.btn-close-1 {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: -5px;
+  right: -5px;
   padding: 10px;
   background-color: #000666;
   border: 3px solid #F9F8F8;
@@ -527,4 +664,122 @@ body {
   color: #F9F8F8;
   font-weight: bold;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .btn-close-1 {
+    padding: 5px;
+    top: -10px;
+    right: -10px;
+  }
+}
+
+.btn-close-2 {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 10px;
+  background-color: #000666;
+  border: 3px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 3px #000666;
+          box-shadow: 0 0 0 3px #000666;
+  color: #F9F8F8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .btn-close-2 {
+    padding: 5px;
+    top: -10px;
+    right: -10px;
+  }
+}
+
+.btn-close-3 {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 10px;
+  background-color: #000666;
+  border: 3px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 3px #000666;
+          box-shadow: 0 0 0 3px #000666;
+  color: #F9F8F8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .btn-close-3 {
+    padding: 5px;
+    top: -10px;
+    right: -10px;
+  }
+}
+
+.btn-close-4 {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 10px;
+  background-color: #000666;
+  border: 3px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 3px #000666;
+          box-shadow: 0 0 0 3px #000666;
+  color: #F9F8F8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .btn-close-4 {
+    padding: 5px;
+    top: -10px;
+    right: -10px;
+  }
+}
+
+.btn-close-5 {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 10px;
+  background-color: #000666;
+  border: 3px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 3px #000666;
+          box-shadow: 0 0 0 3px #000666;
+  color: #F9F8F8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .btn-close-5 {
+    padding: 5px;
+    top: -10px;
+    right: -10px;
+  }
+}
+
+.btn-close-6 {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 10px;
+  background-color: #000666;
+  border: 3px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 3px #000666;
+          box-shadow: 0 0 0 3px #000666;
+  color: #F9F8F8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .btn-close-6 {
+    padding: 5px;
+    top: -10px;
+    right: -10px;
+  }
 }
