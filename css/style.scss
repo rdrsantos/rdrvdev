@@ -249,3 +249,66 @@ body{
 .projetos-item img{
     margin: 0 auto;
 }
+//modal
+.modal-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-on{
+    display: flex;
+}
+
+.modal{
+    position: relative;
+    background-color: $white;
+    width: 50%;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.modal-img{
+    background-color: $mainColor;
+    padding: 20px;
+    border: 5px solid $white;
+    box-shadow: 0 0 0 5px $mainColor;
+}
+.modal-txt{
+    @include textFont;
+}
+.modal-txt h3{
+    @include textFont(26);
+    margin: 20px 0 5px 0;
+}
+
+.modal .btn{
+    background-color: $mainColor;
+    color: $white;
+    border: 3px solid $white;
+    box-shadow: 0 0 0 5px $mainColor;
+    padding: 5px 20px;
+    margin-top: 30px;
+    border-radius: 0;
+}
+
+.btn-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 10px;
+    background-color: $mainColor;
+    border: 3px solid $white;
+    box-shadow: 0 0 0 3px $mainColor;
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -439,3 +439,92 @@ body {
 .projetos-item img {
   margin: 0 auto;
 }
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  background-color: #F9F8F8;
+  width: 50%;
+  border-radius: 5px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.modal-img {
+  background-color: #000666;
+  padding: 20px;
+  border: 5px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 5px #000666;
+          box-shadow: 0 0 0 5px #000666;
+}
+
+.modal-txt {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.875em;
+  line-height: 1.78571em;
+}
+
+.modal-txt h3 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.625em;
+  line-height: 0.96154em;
+  margin: 20px 0 5px 0;
+}
+
+.modal .btn {
+  background-color: #000666;
+  color: #F9F8F8;
+  border: 3px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 5px #000666;
+          box-shadow: 0 0 0 5px #000666;
+  padding: 5px 20px;
+  margin-top: 30px;
+  border-radius: 0;
+}
+
+.btn-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 10px;
+  background-color: #000666;
+  border: 3px solid #F9F8F8;
+  -webkit-box-shadow: 0 0 0 3px #000666;
+          box-shadow: 0 0 0 3px #000666;
+  color: #F9F8F8;
+  font-weight: bold;
+  cursor: pointer;
+}
