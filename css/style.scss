@@ -349,3 +349,63 @@ body{
         }
     }
 }
+
+//contato 
+.contato{
+    @include background(100px 0, $mainColor)
+}
+
+.contato .container{
+    align-items: flex-start;
+}
+
+.contato .title{
+    @include title($white);
+}
+
+.contato-contatos, .contato-form{
+    margin: 0 10px 30px 10px;
+}
+
+.contato-contatos ul{
+    list-style: none;
+}
+.contato-contatos li{
+    margin-bottom: 20px;
+    @include textFont(18);
+    color: $white;
+}
+
+.contato-form{
+    width: 65px * 8;
+}
+
+.contato-form form label{
+    @include textFont(18);
+    color: $white;
+}
+
+.contato-form form input, .contato-form form textarea{
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+    margin: 0 0 10px 0;
+    border: none;
+    border-bottom: 3px solid $white;
+    color: $white;
+    @include textFont;
+    font-size: em(14);
+    outline: 0;
+}
+.contato-form form textarea{
+    border-right: 3px solid $white;
+}
+
+
+//footer
+footer{
+    @include background(10px 0, rgb(9, 1, 58));
+    @include textFont(16);
+    color: $white;
+    text-align: center;
+}
