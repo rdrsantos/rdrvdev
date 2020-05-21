@@ -249,33 +249,20 @@ body{
     margin: 0 auto;
 }
 //modal
-@for $i from 1 through 6{
-    .modal-container-#{$i}{
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, .7);
-        display: none;
-        justify-content: center;
-        align-items: center;
-        animation-name: down;
-        animation-duration: .5s;
-        z-index: 1000;
+.modal-container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
     }
-}
 
-@keyframes down{
-    from{
-        transform: translateY(50px);
-        opacity: 0;
-    } 
-    to{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
+
 .modal-on{
     display: flex;
 }
@@ -290,10 +277,24 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    animation-name: down;
+    animation-duration: .5s;
     @include mobile{
         width: 80%;
     }
 }
+
+@keyframes down{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    } 
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 .modal-img{
     display: flex;
     justify-content: center;
@@ -331,44 +332,40 @@ body{
     border-radius: 0;
 }
 
-@for $i from 1 through 6{
-    .btn-close-#{$i}{
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        padding: 10px;
-        background-color: $mainColor;
-        border: 3px solid $white;
-        box-shadow: 0 0 0 3px $mainColor;
-        color: $white;
-        font-weight: bold;
-        cursor: pointer;
-        outline: none;
-        @include mobile{
-            padding: 5px;
-            top: -10px;
-            right: -10px;
-        }
+
+.btn-close{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    padding: 10px;
+    background-color: $mainColor;
+    border: 3px solid $white;
+    box-shadow: 0 0 0 3px $mainColor;
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    @include mobile{
+    padding: 5px;
+    top: -10px;
+    right: -10px;
     }
 }
+
 
 //contato 
 .contato{
     @include background(100px 0, $mainColor)
 }
-
 .contato .container{
     align-items: flex-start;
 }
-
 .contato .title{
     @include title($white);
 }
-
 .contato-contatos, .contato-form{
     margin: 0 10px 30px 10px;
 }
-
 .contato-contatos ul{
     list-style: none;
 }
@@ -377,16 +374,13 @@ body{
     @include textFont(18);
     color: $white;
 }
-
 .contato-form{
     width: 65px * 8;
 }
-
 .contato-form form label{
     @include textFont(18);
     color: $white;
 }
-
 .contato-form form input, .contato-form form textarea{
     background-color: transparent;
     padding: 10px;
@@ -402,8 +396,6 @@ body{
 .contato-form form textarea{
     border-right: 3px solid $white;
 }
-
-
 //footer
 footer{
     @include background(10px 0, rgb(9, 1, 58));
