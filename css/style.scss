@@ -42,7 +42,7 @@ body{
         position: absolute;
         width: 130px;
         margin: auto;
-        top: 48px;
+        top: 58px;
         left: -100%;
         background-color: $mainColor;
         text-align: center;
@@ -89,6 +89,8 @@ body{
     background-attachment: fixed;
     text-align:center;
     color: $white;
+    position: relative;
+    overflow: hidden;
 }
 
 .intro p{
@@ -114,19 +116,23 @@ body{
     @include textFont;
     font-weight: bold;
     cursor: pointer;
-    margin-left: 10px;
+    margin: 0 10px 10px 10px;
     &:hover{
         box-shadow: 0px 0px 5px $white;
     }
     @include mobile(){
+        display: block;
+        margin: 0 auto 10px auto;
         width: 150px;
-        margin-bottom: 10px;
     }
+
 }
 
 // SOBRE MIM
 .sobre{
     @include background(100px 0);
+    position: relative;
+    overflow: hidden;
 }
 .sobre .container{
     align-items: stretch;;
@@ -193,7 +199,9 @@ body{
 
 // tencologias
 .tecnologias{
-    @include background(100px 0, $mainColor)
+    @include background(100px 0, $mainColor);
+    position: relative;
+    overflow: hidden;
 }
 .tecnologias .title{
     @include title($white)
@@ -224,6 +232,8 @@ body{
 //projetos
 .projetos{
     @include background(100px 0);
+    position: relative;
+    overflow: hidden;
 }
 .projetos .container{
     justify-content: center;
@@ -355,7 +365,9 @@ body{
 
 //contato 
 .contato{
-    @include background(100px 0, $mainColor)
+    @include background(100px 0, $mainColor);
+    position: relative;
+    overflow: hidden;
 }
 .contato .container{
     align-items: flex-start;
@@ -396,10 +408,34 @@ body{
 .contato-form form textarea{
     border-right: 3px solid $white;
 }
+.contato-form .btn{
+    margin: 0;
+}
 //footer
 footer{
     @include background(10px 0, rgb(9, 1, 58));
     @include textFont(16);
     color: $white;
     text-align: center;
+}
+
+//squares
+.squares li{
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255,255, .10);
+    animation: up infinite alternate;
+}
+
+@keyframes up {
+    0%,100%{
+        transform: translate3d(0,0,0)
+    }
+    to{
+
+        transform: translate3d(0, -1000px, 0);
+    }
 }

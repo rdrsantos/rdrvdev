@@ -128,7 +128,7 @@ body {
     position: absolute;
     width: 130px;
     margin: auto;
-    top: 48px;
+    top: 58px;
     left: -100%;
     background-color: #000666;
     text-align: center;
@@ -184,6 +184,8 @@ body {
   background-attachment: fixed;
   text-align: center;
   color: #F9F8F8;
+  position: relative;
+  overflow: hidden;
 }
 
 .intro p {
@@ -226,7 +228,7 @@ body {
   line-height: 1.78571em;
   font-weight: bold;
   cursor: pointer;
-  margin-left: 10px;
+  margin: 0 10px 10px 10px;
 }
 
 .btn:hover {
@@ -236,8 +238,9 @@ body {
 
 @media only screen and (max-width: 700px) {
   .btn {
+    display: block;
+    margin: 0 auto 10px auto;
     width: 150px;
-    margin-bottom: 10px;
   }
 }
 
@@ -245,6 +248,8 @@ body {
   width: 100%;
   padding: 100px 0;
   background-color: #F9F8F8;
+  position: relative;
+  overflow: hidden;
 }
 
 .sobre .container {
@@ -337,6 +342,8 @@ body {
   width: 100%;
   padding: 100px 0;
   background-color: #000666;
+  position: relative;
+  overflow: hidden;
 }
 
 .tecnologias .title {
@@ -401,6 +408,8 @@ body {
   width: 100%;
   padding: 100px 0;
   background-color: #F9F8F8;
+  position: relative;
+  overflow: hidden;
 }
 
 .projetos .container {
@@ -598,6 +607,8 @@ body {
   width: 100%;
   padding: 100px 0;
   background-color: #000666;
+  position: relative;
+  overflow: hidden;
 }
 
 .contato .container {
@@ -677,6 +688,10 @@ body {
   border-right: 3px solid #F9F8F8;
 }
 
+.contato-form .btn {
+  margin: 0;
+}
+
 footer {
   width: 100%;
   padding: 10px 0;
@@ -686,4 +701,37 @@ footer {
   line-height: 1.5625em;
   color: #F9F8F8;
   text-align: center;
+}
+
+.squares li {
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-animation: up infinite alternate;
+          animation: up infinite alternate;
+}
+
+@-webkit-keyframes up {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, -1000px, 0);
+            transform: translate3d(0, -1000px, 0);
+  }
+}
+
+@keyframes up {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, -1000px, 0);
+            transform: translate3d(0, -1000px, 0);
+  }
 }
