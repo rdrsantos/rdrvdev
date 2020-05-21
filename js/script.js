@@ -23,7 +23,7 @@ modal("pjt-6", "btn6", "modal6")
 function squares(ulId){
 
 const ulSquares = document.querySelector(`#${ulId}`)
-for(let i = 0; i < 11; i++){
+for(let i = 0; i < 21; i++){
     const li = document.createElement("li")
     const random = (min, max) => Math.random() * (max - min) + min
     const size = Math.floor(random(5, 100))
