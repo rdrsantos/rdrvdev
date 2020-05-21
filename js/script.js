@@ -47,7 +47,3 @@ squares("squaresInicio")
 squares("squaresTec")
 squares("squaresContato")
 //squares
-
-// Animações scroll
-
-// Animações scroll
