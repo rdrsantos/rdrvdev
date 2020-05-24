@@ -47,32 +47,6 @@ squares("squaresContato")
 //squares
 
 //Validação formulario
-function validar() {
-    let nome = document.querySelector("#nome")
-    let email = document.querySelector("#email")
-    let msg = document.querySelector("#msg")
-    let btnSubmit = document.querySelector(".contato-form .btn")
-    if(nome.value.length === 0 || email.value.length === 0 || msg.value.length === 0){
-        alert("Preencha todos os campos corretamente!")
-    } else {
-        alert("Mensagem enviada com sucesso.")
-        nome.value = " "
-        email.value = " "
-        msg.value = " "
-    }
-    if(nome.value.length === 0){
-        nome.style.borderBottom = "3px solid red"
-        document.querySelector("#labelNome").style.color = "red"
-    }
-    if(email.value.length === 0){
-        email.style.borderBottom = "3px solid red"
-        document.querySelector("#labelEmail").style.color = "red"   
-    }
-    if(msg.value.length === 0){
-        msg.style.borderBottom = "3px solid red"
-        msg.style.borderRight = "3px solid red"
-        document.querySelector("#labelMsg").style.color = "red"   
-    }
-    nome.focus()
-}
+let inputsForm = document.querySelectorAll(".contato-form input")
+console.log(inputsForm)
 //Validação formulario
