@@ -68,6 +68,9 @@ a {
 
 body {
   background-color: #F9F8F8;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .header {
@@ -248,8 +251,6 @@ body {
   width: 100%;
   padding: 100px 0;
   background-color: #F9F8F8;
-  position: relative;
-  overflow: hidden;
 }
 
 .sobre .container {
@@ -342,8 +343,6 @@ body {
   width: 100%;
   padding: 100px 0;
   background-color: #000666;
-  position: relative;
-  overflow: hidden;
 }
 
 .tecnologias .title {
@@ -408,8 +407,6 @@ body {
   width: 100%;
   padding: 100px 0;
   background-color: #F9F8F8;
-  position: relative;
-  overflow: hidden;
 }
 
 .projetos .container {
@@ -607,8 +604,6 @@ body {
   width: 100%;
   padding: 100px 0;
   background-color: #000666;
-  position: relative;
-  overflow: hidden;
 }
 
 .contato .container {
@@ -703,45 +698,34 @@ footer {
   text-align: center;
 }
 
-.squares li {
-  display: block;
-  position: absolute;
-  bottom: -40px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-animation: up infinite alternate;
-          animation: up infinite alternate;
+[data-a] {
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
-@-webkit-keyframes up {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -1000px, 0);
-            transform: translate3d(0, -1000px, 0);
-  }
+[data-a="left"] {
+  -webkit-transform: translate3d(-70px, 0, 0);
+          transform: translate3d(-70px, 0, 0);
 }
 
-@keyframes up {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -1000px, 0);
-            transform: translate3d(0, -1000px, 0);
-  }
+[data-a="right"] {
+  -webkit-transform: translate3d(70px, 0, 0);
+          transform: translate3d(70px, 0, 0);
+}
+
+[data-a="down"] {
+  -webkit-transform: translate3d(0, 70px, 0);
+          transform: translate3d(0, 70px, 0);
+}
+
+[data-a="up"] {
+  -webkit-transform: translate3d(0, -70px, 0);
+          transform: translate3d(0, -70px, 0);
+}
+
+[data-a].ativo {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }

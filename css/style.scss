@@ -1,6 +1,9 @@
 @import "configs";
 body{
     background-color: $white;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible;
 }
 
 // header
@@ -131,8 +134,6 @@ body{
 // SOBRE MIM
 .sobre{
     @include background(100px 0);
-    position: relative;
-    overflow: hidden;
 }
 .sobre .container{
     align-items: stretch;;
@@ -200,8 +201,6 @@ body{
 // tencologias
 .tecnologias{
     @include background(100px 0, $mainColor);
-    position: relative;
-    overflow: hidden;
 }
 .tecnologias .title{
     @include title($white)
@@ -212,7 +211,6 @@ body{
     text-align: center;
     border: 5px solid $white;
     margin: 0 10px;
-
     margin-bottom: 20px;
 }
 
@@ -232,8 +230,6 @@ body{
 //projetos
 .projetos{
     @include background(100px 0);
-    position: relative;
-    overflow: hidden;
 }
 .projetos .container{
     justify-content: center;
@@ -366,8 +362,6 @@ body{
 //contato 
 .contato{
     @include background(100px 0, $mainColor);
-    position: relative;
-    overflow: hidden;
 }
 .contato .container{
     align-items: flex-start;
@@ -419,27 +413,24 @@ footer{
     text-align: center;
 }
 
-//squares
-.squares li{
-    display: block;
-    position: absolute;
-    bottom: -40px;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255,255, .10);
-    animation: up infinite alternate;
+//animações
+[data-a]{
+    opacity: 0;
+    transition: .5s;
 }
-
-@keyframes up {
-    from{
-        opacity: 0;
-        transform: translate3d(0,0,0)
-    }
-    50%{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-        transform: translate3d(0, -1000px, 0);
-    }
+[data-a="left"]{
+    transform: translate3d(-70px,0,0);
+}
+[data-a="right"]{
+    transform: translate3d(70px,0,0);
+}
+[data-a="down"]{
+    transform: translate3d(0,70px,0);
+}
+[data-a="up"]{
+    transform: translate3d(0,-70px,0);
+}
+[data-a].ativo{
+    opacity: 1;
+    transform: translate3d(0,0,0);
 }

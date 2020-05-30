@@ -18,61 +18,55 @@ modal("pjt-5", "btn5", "modal5")
 modal("pjt-6", "btn6", "modal6")
 //Modal projetos
 
-//squares
-function squares(ulId){
-    const ulSquares = document.querySelector(`#${ulId}`)
-    for(let i = 0; i < 21; i++){
-        const li = document.createElement("li")
-        const random = (min, max) => Math.random() * (max - min) + min
-        const size = Math.floor(random(5, 100))
-        const position = random(1, 99)
-        const delay = random(5, 0.1)
-        const duration = random(1, 20)
-
-        li.style.width = `${size}px`
-        li.style.height = `${size}px`
-        li.style.bottom = `-${size}px`
-        li.style.left = `${position}%`
-        li.style.animationDelay = `${delay}s`
-        li.style.animationDuration = `${duration}s`
-        li.style.animationTimingFunction = `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()},, ${Math.random()})`
-        if(ulId == "squaresB" || ulId == "squaresB1"){
-            li.style.backgroundColor = "rgba(0, 6, 102, .10)"
-    }
-    ulSquares.appendChild(li)
-}}
-squares("squaresInicio")
-squares("squaresTec")
-squares("squaresContato")
-//squares
-
 //Validação formulario
 function validar() {
     let nome = document.querySelector("#nome")
     let email = document.querySelector("#email")
     let msg = document.querySelector("#msg")
     let btnSubmit = document.querySelector(".contato-form .btn")
-    if(nome.value.length === 0 || email.value.length === 0 || msg.value.length === 0){
-        alert("Preencha todos os campos corretamente!")
-    } else {
+    if(nome.value.length !== 0 || email.value.length !== 0 || msg.value.length !== 0){
         alert("Mensagem enviada com sucesso.")
-        nome.value = " "
-        email.value = " "
-        msg.value = " "
+        nome.value = ""
+        email.value = ""
+        msg.value = ""
+    } else {
+        alert("Preencha todos os campos corretamente!")
+        nome.focus()
     }
-    if(nome.value.length === 0){
-        nome.style.borderBottom = "3px solid red"
-        document.querySelector("#labelNome").style.color = "red"
-    }
-    if(email.value.length === 0){
-        email.style.borderBottom = "3px solid red"
-        document.querySelector("#labelEmail").style.color = "red"   
-    }
-    if(msg.value.length === 0){
-        msg.style.borderBottom = "3px solid red"
-        msg.style.borderRight = "3px solid red"
-        document.querySelector("#labelMsg").style.color = "red"   
-    }
-    nome.focus()
 }
 //Validação formulario
+
+//Animações
+const debounce = function(func, wait, immediate) {
+    let timeout;
+    return function(...args) {
+      const context = this;
+      const later = function () {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+let items = document.querySelectorAll('[data-a]')
+function animar(){
+    let windowTop = pageYOffset + (window.innerHeight * 0.75)
+    items.forEach((item) => {
+        if((windowTop) > item.offsetTop){
+            item.classList.add('ativo')
+        }else {
+            item.classList.remove('ativo')
+        }
+    })
+    console.log('oi')
+}
+
+animar();
+if(items.length) {
+  window.addEventListener('scroll', debounce(animar, 200));
+}
+//Animações
