@@ -700,8 +700,8 @@ footer {
 
 [data-a] {
   opacity: 0;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 [data-a="left"] {
