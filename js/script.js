@@ -31,8 +31,8 @@ function validar() {
         msg.value = ""
     } else {
         alert("Preencha todos os campos corretamente!")
-        nome.focus()
     }
+    nome.focus()
 }
 //Validação formulario
 
@@ -58,11 +58,8 @@ function animar(){
     items.forEach((item) => {
         if((windowTop) > item.offsetTop){
             item.classList.add('ativo')
-        }else {
-            item.classList.remove('ativo')
         }
     })
-    console.log('oi')
 }
 
 animar();

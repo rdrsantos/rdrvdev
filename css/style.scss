@@ -419,16 +419,16 @@ footer{
     transition: .3s;
 }
 [data-a="left"]{
-    transform: translate3d(-70px,0,0);
+    transform: translate3d(-50px,0,0);
 }
 [data-a="right"]{
-    transform: translate3d(70px,0,0);
+    transform: translate3d(50px,0,0);
 }
 [data-a="down"]{
-    transform: translate3d(0,70px,0);
+    transform: translate3d(0,50px,0);
 }
 [data-a="up"]{
-    transform: translate3d(0,-70px,0);
+    transform: translate3d(0,-50px,0);
 }
 [data-a].ativo{
     opacity: 1;
