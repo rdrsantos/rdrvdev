@@ -31,6 +31,7 @@ function validar() {
         msg.value = ""
     } else {
         alert("Preencha todos os campos corretamente!")
+        btnSubmit.preventDefault()
     }
     nome.focus()
 }
