@@ -19,7 +19,7 @@ modal("pjt-6", "btn6", "modal6")
 //Modal projetos
 
 //Validação formulario
-function validar() {
+function validar(e) {
     let nome = document.querySelector("#nome")
     let email = document.querySelector("#email")
     let msg = document.querySelector("#msg")
@@ -31,10 +31,10 @@ function validar() {
         msg.value = ""
     } else {
         alert("Preencha todos os campos corretamente!")
-        btnSubmit.preventDefault()
     }
     nome.focus()
 }
+validar()
 //Validação formulario
 
 //Animações
@@ -52,7 +52,6 @@ const debounce = function(func, wait, immediate) {
       if (callNow) func.apply(context, args);
     };
   };
-
 let items = document.querySelectorAll('[data-a]')
 function animar(){
     let windowTop = pageYOffset + (window.innerHeight * 0.75)
@@ -62,7 +61,6 @@ function animar(){
         }
     })
 }
-
 animar();
 if(items.length) {
   window.addEventListener('scroll', debounce(animar, 200));
