@@ -202,6 +202,10 @@ body{
 .tecnologias{
     @include background(100px 0, $mainColor);
 }
+.tecnologias .container{
+    justify-content: space-around;
+}
+
 .tecnologias .title{
     @include title($white)
 }

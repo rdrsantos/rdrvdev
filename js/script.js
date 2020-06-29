@@ -19,7 +19,7 @@ modal("pjt-6", "btn6", "modal6")
 //Modal projetos
 
 //Validação formulario
-function validar(e) {
+function validar() {
     let nome = document.querySelector("#nome")
     let email = document.querySelector("#email")
     let msg = document.querySelector("#msg")
@@ -34,7 +34,6 @@ function validar(e) {
     }
     nome.focus()
 }
-validar()
 //Validação formulario
 
 //Animações
