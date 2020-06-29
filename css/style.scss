@@ -13,7 +13,11 @@ body{
     position: fixed;
     z-index: 100;
 }
-
+.header .container{
+    @include mobile{
+        justify-content: space-between;
+    }
+}
 .check-mobi{
     display: none;
     @include mobile{
@@ -26,9 +30,7 @@ body{
 .header input{
     display: none;
 }
-.header a{
-    padding-left: 10px;
-}
+
 .logo{
     width: 121px;
     height: 24px;
@@ -125,8 +127,7 @@ body{
     }
     @include mobile(){
         display: block;
-        margin: 0 auto 10px auto;
-        width: 150px;
+        margin: 0 10px 10px 10px;
     }
 
 }
@@ -250,8 +251,8 @@ body{
     margin: 10px;
     cursor: pointer;
     @include mobile{
-        width: 120px;
-        height: 80px;
+        width: 40%;
+        height: 100px;
         padding: 10px;
     }
 }
