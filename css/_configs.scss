@@ -77,9 +77,10 @@ $black: #222;
     justify-content: space-between;
     align-items: center;
     @include mobile{
-        max-width: 300px;
+        max-width: 100%;
         padding-left: 10px;
         padding-right: 10px;
+        justify-content: space-around;
     }
 }
 .container{

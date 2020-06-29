@@ -35,9 +35,11 @@ a {
 
 @media only screen and (max-width: 700px) {
   .container {
-    max-width: 300px;
+    max-width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
