@@ -14,6 +14,7 @@ modal("pjt-1", "btn1", "modal1")
 modal("pjt-2", "btn2", "modal2")
 modal("pjt-3", "btn3", "modal3")
 modal("pjt-4", "btn4", "modal4")
+modal("pjt-5", "btn5", "modal5")
 //Modal projetos
 
 //Validação formulario
