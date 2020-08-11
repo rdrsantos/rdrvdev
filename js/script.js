@@ -1,3 +1,22 @@
+// cursor
+function cursor(){
+    const links = document.querySelectorAll('a')
+    const cursor = document.querySelector('.cursor')
+    window.addEventListener('mousemove', (e) => {
+        cursor.style.top = e.pageY + 'px'
+        cursor.style.left = e.pageX + 'px'
+    })
+    links.forEach((link) =>{
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('cursor-g')
+        })
+        link.addEventListener('mouseout', () => {
+            cursor.classList.remove('cursor-g')
+        })
+    })
+}
+cursor()
+
 //Modal projetos
 function modal (projetoId, btn, modalItem){
     let projeto = document.querySelector(`.${projetoId}`)
@@ -10,11 +29,9 @@ function modal (projetoId, btn, modalItem){
         modalTarget.classList.remove("modal-on")
     })
 }
-modal("pjt-1", "btn1", "modal1")
-modal("pjt-2", "btn2", "modal2")
-modal("pjt-3", "btn3", "modal3")
-modal("pjt-4", "btn4", "modal4")
-modal("pjt-5", "btn5", "modal5")
+for(let i = 1; i <= 5; i++){
+    modal(`pjt-${i}`, `btn${i}`, `modal${i}`)
+}
 //Modal projetos
 
 //Validação formulario
@@ -61,6 +78,6 @@ function animar(){
 }
 animar();
 if(items.length) {
-  window.addEventListener('scroll', debounce(animar, 200));
+  window.addEventListener('scroll', debounce(animar, 100));
 }
 //Animações
