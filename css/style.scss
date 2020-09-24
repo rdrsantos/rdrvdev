@@ -109,7 +109,6 @@ body{
 //intro
 .intro{
     @include background(200px 0, $mainColor);
-    background-attachment: fixed;
     text-align:center;
     color: $white;
     overflow: hidden;
@@ -455,4 +454,31 @@ footer{
 [data-a].ativo{
     opacity: 1;
     transform: translate3d(0,0,0);
+}
+
+.dark-mode{
+    position: fixed;
+    top: 5px;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 50;
+}
+
+.dark-mode i{
+    color: $white;
+    font-size: em(30);
+    padding: 10px;
+    cursor: pointer;
+}
+.dark-mode .light i{
+    border-right: 1px solid $white;
+}
+
+.dark-color-1{
+    background-color: #1B1D23;
+}
+.dark-color-2{
+    background-color: #ccc;
 }

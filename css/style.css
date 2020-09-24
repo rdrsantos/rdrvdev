@@ -211,7 +211,6 @@ body {
   width: 100%;
   padding: 200px 0;
   background-color: #000666;
-  background-attachment: fixed;
   text-align: center;
   color: #F9F8F8;
   overflow: hidden;
@@ -758,4 +757,38 @@ footer {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+}
+
+.dark-mode {
+  position: fixed;
+  top: 5px;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 50;
+}
+
+.dark-mode i {
+  color: #F9F8F8;
+  font-size: 1.875em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dark-mode .light i {
+  border-right: 1px solid #F9F8F8;
+}
+
+.dark-color-1 {
+  background-color: #1B1D23;
+}
+
+.dark-color-2 {
+  background-color: #ccc;
 }

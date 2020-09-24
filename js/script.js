@@ -81,3 +81,20 @@ if(items.length) {
   window.addEventListener('scroll', debounce(animar, 100));
 }
 //Animações
+
+//dark mode
+
+function darkMode(btn, elemento, cor){
+    btn = document.querySelector(`.${btn}`)
+    elemento = document.querySelector(`.${elemento}`)
+    cor = cor
+    btn.addEventListener('click', () => {
+        elemento.classList.toggle(cor)
+    })
+}
+darkMode('dark', 'header', 'dark-color-1')
+darkMode('dark', 'intro', 'dark-color-1')
+darkMode('dark', 'sobre', 'dark-color-2')
+darkMode('dark', 'tecnologias', 'dark-color-1')
+darkMode('dark', 'projetos', 'dark-color-2')
+darkMode('dark', 'contato', 'dark-color-1')
