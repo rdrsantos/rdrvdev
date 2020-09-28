@@ -266,7 +266,7 @@ body{
     height: 150px;
     background-color: $mainColor;
     border: 5px solid $white;
-    box-shadow: 0 0 0 5px currentColor;
+    box-shadow: 0 0 0 5px $mainColor;
     margin: 10px;
     cursor: pointer;
     @include mobile{
