@@ -467,6 +467,11 @@ footer{
     justify-content: space-around;
     align-items: center;
     z-index: 50;
+    @include mobile{
+        background-color: #333;
+        border-radius: 50%;
+        top: 90%;
+    }
 }
 
 .dark-mode i{
@@ -481,8 +486,4 @@ footer{
 }
 .dark-color-2{
     background-color: #ccc;
-}
-
-.verde{
-    background-color: #012123;
 }

@@ -99,8 +99,3 @@ darkMode('dark', 'sobre', 'dark-color-2')
 darkMode('dark', 'tecnologias', 'dark-color-1')
 darkMode('dark', 'projetos', 'dark-color-2')
 darkMode('dark', 'contato', 'dark-color-1')
-
-const lightbtn = document.querySelector('.dark')
-lightbtn.addEventListener('click', () => {
-    document.querySelector('.dark i').style.color = 'green'
-})

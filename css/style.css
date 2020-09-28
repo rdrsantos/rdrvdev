@@ -89,6 +89,12 @@ body {
   transition: all .1s ease;
 }
 
+@media only screen and (max-width: 700px) {
+  .cursor {
+    display: none;
+  }
+}
+
 .cursor-g {
   -webkit-transform: scale(2);
           transform: scale(2);
@@ -455,8 +461,8 @@ body {
   height: 150px;
   background-color: #000666;
   border: 5px solid #F9F8F8;
-  -webkit-box-shadow: 0 0 0 5px #000666;
-          box-shadow: 0 0 0 5px #000666;
+  -webkit-box-shadow: 0 0 0 5px currentColor;
+          box-shadow: 0 0 0 5px currentColor;
   margin: 10px;
   cursor: pointer;
 }
@@ -774,15 +780,19 @@ footer {
   z-index: 50;
 }
 
+@media only screen and (max-width: 700px) {
+  .dark-mode {
+    background-color: #333;
+    border-radius: 50%;
+    top: 90%;
+  }
+}
+
 .dark-mode i {
   color: #F9F8F8;
   font-size: 1.875em;
   padding: 10px;
   cursor: pointer;
-}
-
-.dark-mode .light i {
-  border-right: 1px solid #F9F8F8;
 }
 
 .dark-color-1 {
