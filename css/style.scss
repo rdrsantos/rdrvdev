@@ -13,7 +13,7 @@ body{
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    z-index: 5;
+    z-index: 100;
     transition: all .1s ease;
     @include mobile{
         display: none;
@@ -266,7 +266,7 @@ body{
     height: 150px;
     background-color: $mainColor;
     border: 5px solid $white;
-    box-shadow: 0 0 0 5px currentColor;
+    box-shadow: 0 0 0 5px $mainColor;
     margin: 10px;
     cursor: pointer;
     @include mobile{
@@ -461,21 +461,53 @@ footer{
 
 .dark-mode{
     position: fixed;
-    top: 5px;
-    right: 0;
+    top: 15px;
+    right: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     z-index: 50;
+    @include mobile{
+        top: 90%;
+        
+    }
 }
 
-.dark-mode i{
-    color: $white;
-    font-size: em(30);
-    padding: 10px;
-    cursor: pointer;
+.dark-mode input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    background-color: #ccc;
+    width: 70px;
+    height: 30px;
+    outline: none;
+    border-radius: 20px;
+    transition: .3s;
+    &:checked{
+        background-color: #444;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: darkblue;
+        color: #ccc;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        transform: scale(1.1);
+        transition: .3s;
+        box-sizing: border-box;
+    }
+    &:checked::after{
+        left: 40px;
+    }
+
 }
 
+.dark-mode input:checked[type="checkbox"]::after{
+    left: 40px;
+}
 .dark-color-1{
     background-color: #1B1D23;
 }
