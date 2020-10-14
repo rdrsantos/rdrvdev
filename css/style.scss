@@ -461,16 +461,12 @@ footer{
 
 .dark-mode{
     position: fixed;
-    top: 15px;
+    bottom: 15px;
     right: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     z-index: 50;
-    @include mobile{
-        top: 90%;
-        
-    }
 }
 
 .dark-mode input[type="checkbox"]{
@@ -486,7 +482,7 @@ footer{
         background-color: #444;
     }
     &::after{
-        content: '';
+        content: url(../img/moon.png);
         position: absolute;
         width: 30px;
         height: 30px;
@@ -497,7 +493,9 @@ footer{
         left: 0;
         transform: scale(1.1);
         transition: .3s;
-        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &:checked::after{
         left: 40px;

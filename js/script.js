@@ -84,23 +84,23 @@ if(items.length) {
 
 //dark mode
 
-function darkMode(btn, elemento, cor){
-    btn = document.querySelector(`.${btn}`)
+function darkMode(checkbox, elemento, cor){
+    checkbox = document.querySelector(`.${checkbox}`)
     elemento = document.querySelector(`.${elemento}`)
     cor = cor
-    btn.addEventListener('click', () => {
+    
+    checkbox.addEventListener('change', () => {
         elemento.classList.toggle(cor)
         elemento.style.borderColor = `${cor}`
     })
 }
-darkMode('dark', 'header', 'dark-color-1')
-darkMode('dark', 'intro', 'dark-color-1')
-darkMode('dark', 'sobre', 'dark-color-2')
-darkMode('dark', 'tecnologias', 'dark-color-1')
-darkMode('dark', 'projetos', 'dark-color-2')
-darkMode('dark', 'contato', 'dark-color-1')
+darkMode('check-dark', 'header', 'dark-color-1')
+darkMode('check-dark', 'intro', 'dark-color-1')
+darkMode('check-dark', 'sobre', 'dark-color-2')
+darkMode('check-dark', 'tecnologias', 'dark-color-1')
+darkMode('check-dark', 'projetos', 'dark-color-2')
+darkMode('check-dark', 'contato', 'dark-color-1')
 
-const lightbtn = document.querySelector('.dark')
-lightbtn.addEventListener('click', () => {
-    document.querySelector('.dark i').style.color = 'green'
-})
+for(let i = 0; i <= 5; i++){
+    darkMode('check-dark', `projetos .pjt-${i}`, 'dark-color-1')
+}
