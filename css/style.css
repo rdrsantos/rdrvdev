@@ -8,6 +8,10 @@
   z-index: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -84,7 +88,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 5;
+  z-index: 100;
   -webkit-transition: all .1s ease;
   transition: all .1s ease;
 }
@@ -767,8 +771,8 @@ footer {
 
 .dark-mode {
   position: fixed;
-  top: 5px;
-  right: 0;
+  bottom: 15px;
+  right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -780,19 +784,55 @@ footer {
   z-index: 50;
 }
 
-@media only screen and (max-width: 700px) {
-  .dark-mode {
-    background-color: #333;
-    border-radius: 50%;
-    top: 90%;
-  }
+.dark-mode input[type="checkbox"] {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #ccc;
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border-radius: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-.dark-mode i {
-  color: #F9F8F8;
-  font-size: 1.875em;
-  padding: 10px;
-  cursor: pointer;
+.dark-mode input[type="checkbox"]:checked {
+  background-color: #444;
+}
+
+.dark-mode input[type="checkbox"]::after {
+  content: url(../img/moon.png);
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: darkblue;
+  color: #ccc;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dark-mode input[type="checkbox"]:checked::after {
+  left: 40px;
+}
+
+.dark-mode input:checked[type="checkbox"]::after {
+  left: 40px;
 }
 
 .dark-color-1 {
