@@ -254,7 +254,7 @@ body {
 
 @media only screen and (max-width: 700px) {
   .intro h1 {
-    font-size: 1.875em;
+    font-size: 2.5em;
   }
 }
 
@@ -282,8 +282,10 @@ body {
 
 @media only screen and (max-width: 700px) {
   .btn {
+    display: block;
+    float: left;
     margin: 0 10px 10px 10px;
-    padding: 10px 25px;
+    padding: 10px 40px;
   }
 }
 
