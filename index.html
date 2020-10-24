@@ -11,9 +11,6 @@
 <body>
     <div class="cursor">
     </div>
-    <div class="dark-mode">
-        <input type="checkbox" class="check-dark">
-    </div>
     <header class="header menu-scroll">
         <div class="container">
             <a href="#inicio"><h1 class="logo">Rodrigo Silva - Desenvolvedor Web e Web Design</h1></a>
@@ -23,7 +20,7 @@
                 <ul class="menu">
                     <li><a href="#inicio">INICIO</a></li>
                     <li><a href="#sobre">SOBRE MIM</a></li>
-                    <li><a href="#tecnologias">TECNOLOGIAS</a></li>
+                    <li><a href="#tecnologias">SKILLS</a></li>
                     <li><a href="#projetos">PROJETOS</a></li>
                     <li><a href="#contato">CONTATO</a></li>
                 </ul>
@@ -31,11 +28,13 @@
         </div>
     </header>
     <section id="inicio" class="intro">
-            <p>Olá, que bom ter você aqui</p>
-            <h1>SEJA BEM-VINDO</h1>
-
-            <a href="#sobre"class="btn">SOBRE</a>
-            <a href="#projetos" class="btn">PROJETOS</a>
+        <div class="container">
+            <h1>Conte comigo para <br> criar seu site</h1>
+            <div class="intro-btns">
+                <a href="#sobre"class="btn">CONTATO</a>
+                <a href="#projetos" class="btn">PROJETOS</a>
+            </div>
+        </div>
     </section>
 
     <!-- SOBRE -->
@@ -43,19 +42,16 @@
         <h2 class="title" data-a="up">SOBRE MIM</h2>
         <div class="container">
             <div class="sobre-txt" data-a="left">
-                <span>Olá, eu sou o Rodrigo</span>
-                
-                <p>Olá, tudo bem? é um prazer tê-lo(a) aqui. Me chamo Rodrigo e sempre me identifiquei com tecnologia, então quando tinha 17 anos e prestes a terminar o ensino médio, decidi começar meus estudos na área de programação, porém foi um choque enorme quando eu vi que existia “milhares” de coisas diferentes e confesso que fiquei meio perdido no começo, como quase todo mundo dessa área. Até que eu descobri como as coisas funcionavam por trás da web, então dediquei todo o tempo que tinha para estudar sobre desenvolvimento web e também sobre front-end e felizmente eu percebi que era isso que queria fazer. Hoje trabalho como freelancer, e desenvolvo alguns projetos pessoais.</p>
+                <p>Olá, tudo bem? é um prazer tê-lo(a) aqui. Me chamo Rodrigo e sempre me identifiquei com tecnologia, então quando tinha 17 anos e prestes a terminar o ensino médio, decidi começar meus estudos na área de programação, porém foi um choque enorme quando eu vi que existia “milhares” de coisas diferentes e confesso que fiquei meio perdido no começo, como quase todo mundo dessa área.</p>
 
-                <div class="citacao">
-                    <blockquote>
-                        <p>" Em primeiro lugar vem a dedicação, depois a habilidade. "</p>
-                        <cite>Leonardo da Vinci</cite>
-                    </blockquote>
-                </div>
+                <ul>
+                    <li>Idade: 20 anos</li>
+                    <li>E-mail: rdrsantos014@gmail.com</li>
+                    <li>Celular: 73 998048574</li>
+                </ul>
             </div>
             <div class="sobre-img" data-a="right">
-                <img src="img/photo-intro.jpg" alt="">
+                <img src="img/img-sobre.png" alt="">
             </div>
         </div>
     </section>
@@ -63,22 +59,18 @@
 
     <!-- TECNOLOGIAS -->
     <section class="tecnologias" id="tecnologias">
-        <h2 class="title" data-a="up">TECNOLOGIAS</h2>
+        <h2 class="title" data-a="up">SKILLS</h2>
         <div class="container">
-            <div class="tec-item" data-a="left">
-                <h3>HTML</h3>
+            <div class="tec-item" data-a="left">       
                 <img src="img/html.png" alt="HTML">
             </div>
-            <div class="tec-item"  data-a="down">
-                <h3>CSS</h3>
+            <div class="tec-item"  data-a="down">   
                 <img src="img/css.png" alt="CSS">
             </div>
             <div class="tec-item"  data-a="down">
-                <h3>JAVASCRIPT</h3>
                 <img src="img/javascript.png" alt="CSS">
             </div>
-            <div class="tec-item" data-a="right">
-                <h3>SASS</h3>
+            <div class="tec-item" data-a="right">       
                 <img src="img/sass.png" alt="SASS">
             </div>
         </div>

@@ -8,7 +8,7 @@ body{
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: blue;
+    background-color: $secColor;
     opacity: .5;
     border-radius: 50%;
     transform: translate(-50%, -50%);
@@ -89,20 +89,24 @@ body{
     font-weight: bold;
     position: relative;
     display: block;
+    transition: .3s;
+    &:hover{
+        color: $secColor;
+    }
     &::after{
         content: '';
         position: absolute;
         width: 0;
         height: 3px;
-        background-color: $white;
         left: 0;
         bottom: 0;
-        transition: all .4s ease;
+        transition: all .3s ease;
         opacity: 0;
     }
     &:hover::after{
         width: 100%;
         opacity: 1;
+        background-color: $secColor;
     }
     @include mobile{
         padding: 20px;
@@ -112,48 +116,67 @@ body{
 //intro
 .intro{
     @include background(200px 0, $mainColor);
-    text-align:center;
     color: $white;
-    overflow: hidden;
 }
 
-.intro p{
-    @include textFont;
-    font-size: 1.25em;
-    @include mobile{
-        font-size: 1.125em;
-    }
+.intro .container{
+    padding-bottom: 15px;
 }
+
 .intro h1{
     @include mainFont;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     padding: 0 10px;
+    font-size: em(64);
+    width: 100%;
 }
 
 .btn{
     padding: 15px 50px;
-    border: none;
-    border-radius: 5px;
-    background-color: $white;
+    border: 3px solid $white;
+    background-color: transparent;
     text-align: center;
-    color: $black;
+    color: $white;
     @include textFont;
     font-weight: bold;
     cursor: pointer;
     margin: 0 10px 10px 10px;
+    transition: .3s;
     &:hover{
-        box-shadow: 0px 0px 5px $white;
+        color: $mainColor;
+        border-color: $secColor;
+        background-color: $secColor;
     }
     @include mobile(){
         display: block;
         margin: 0 10px 10px 10px;
+        padding: 10px 25px;
     }
 
 }
 
 // SOBRE MIM
 .sobre{
-    @include background(100px 0);
+    @include background(100px 0, $mainColor);
+    position: relative;
+    &::after, &::before{
+        content: '';
+        width: 400px;
+        height: 2px;
+        background-color: $secColor;
+        position: absolute;
+        @include mobile{
+            width: 50%;
+        }
+    }
+    &::after{
+        top: 0;
+        left: 0;
+    }
+    &::before{
+        bottom: 0;
+        right: 0;
+    }
 }
 .sobre .container{
     align-items: stretch;;
@@ -162,68 +185,68 @@ body{
     max-width: 65px * 8;
     padding: 0 10px;
     position: relative;
+    color: $white;
 }
-.sobre-txt span{
-    @include textFont(20);
-    display: block;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+
 .sobre-txt p{
     @include textFont;
 }
-
-.citacao{
-    text-align: center;
-    padding: 50px 10px;
-    margin-top: 100px;
-    border-top: 2px solid rgba(34, 34, 34, .2);
-    border-bottom: 2px solid rgba(34, 34, 34, .2);
-    color: rgba(34, 34, 34, .5);
-    @include mobile{
-        display: block;
-        padding: 0 10px;
-        margin: 50px 0;    
-    }
-
+.sobre-txt ul{
+    list-style: none;
+    margin-top: 40px;
 }
-.citacao p{
-    @include textFont(26);
-    font-style: italic;
-    font-family: serif;
+.sobre-txt ul li{
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
     &::after{
         content: '';
-        display: block;
-        margin: 10px auto;
-        width: 20px;
-        height: 2px;
-        background-color: currentColor;
-        
-    }
-    @include mobile{
-        font-size: 20px;
-        padding-top: 10px;
-    }
-}
-.citacao cite{
-    @include textFont(20);
-    font-family: serif;
-    @include mobile{
-        font-size: 18px;
+        position: absolute;
+        width: 10px;
+        height: 20px;
+        background-color: $secColor;
+        left: 0;
     }
 }
 
 .sobre-img{
     border: 5px solid $mainColor;
     margin: 0 10px;
+    position: relative;
+    transition: .3s;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $secColor;
+        bottom: -20px;
+        right: -20px;
+        z-index: -1;
+        transition: .3s;
+    }
+    &:hover::after{
+        bottom: -40px;
+        right: -40px;
+    }
 }
 
 // tencologias
 .tecnologias{
     @include background(100px 0, $mainColor);
-}
-.tecnologias .container{
-    justify-content: space-around;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 400px;
+        height: 2px;
+        background-color: $secColor;
+        bottom: 0;
+        left: 0;
+        @include mobile{
+            width: 50%;
+        }
+    }
 }
 
 .tecnologias .title{
@@ -231,20 +254,11 @@ body{
 }
 
 .tec-item{
-    width: 310px;
+    width: 230px;
     text-align: center;
     border: 5px solid $white;
     margin: 0 10px;
     margin-bottom: 20px;
-}
-
-.tec-item h3{
-    @include mainFont(30);
-    padding: 10px 0;
-    border-bottom: 5px solid $white;
-    @include mobile{
-        font-size: em(26, 16);
-    }
 }
 
 .tec-item img{
@@ -254,6 +268,19 @@ body{
 //projetos
 .projetos{
     @include background(100px 0);
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 400px;
+        height: 2px;
+        background-color: $secColor;
+        bottom: 0;
+        right: 0;
+        @include mobile{
+            width: 50%;
+        }
+    }
 }
 .projetos .container{
     justify-content: center;
@@ -262,13 +289,31 @@ body{
 .projetos-item{
     display: flex;
     align-items: center;
-    width: 300px;
-    height: 150px;
-    background-color: $mainColor;
-    border: 5px solid $white;
-    box-shadow: 0 0 0 5px $mainColor;
+    width: 313px;
+    height: 240px;
+    background-color: $white;
     margin: 10px;
+    position: relative;
     cursor: pointer;
+    transition: .3s;
+    &:hover{
+        background-color: $secColor;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        transition: .3s;
+    }
+    &:hover::after{
+        bottom: 10px;
+        right: 10px;
+    }
     @include mobile{
         width: 40%;
         height: 100px;
@@ -404,6 +449,9 @@ body{
     @include textFont(18);
     color: $white;
 }
+.contato-contatos li i{
+    color: $secColor;
+}
 .contato-form{
     width: 65px * 8;
 }
@@ -417,23 +465,21 @@ body{
     width: 100%;
     margin: 0 0 10px 0;
     border: none;
-    border-bottom: 3px solid $white;
+    border-bottom: 3px solid $secColor;
     color: $white;
     @include textFont;
     font-size: em(14);
     outline: 0;
 }
-.contato-form form textarea{
-    border-right: 3px solid $white;
-}
+
 .contato-form .btn{
     margin: 0;
 }
 //footer
 footer{
-    @include background(10px 0, rgb(9, 1, 58));
+    @include background(10px 0, $secColor);
     @include textFont(16);
-    color: $white;
+    color: $mainColor;
     text-align: center;
 }
 
@@ -459,56 +505,3 @@ footer{
     transform: translate3d(0,0,0);
 }
 
-.dark-mode{
-    position: fixed;
-    bottom: 15px;
-    right: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 50;
-}
-
-.dark-mode input[type="checkbox"]{
-    position: relative;
-    appearance: none;
-    background-color: #ccc;
-    width: 70px;
-    height: 30px;
-    outline: none;
-    border-radius: 20px;
-    transition: .3s;
-    &:checked{
-        background-color: #444;
-    }
-    &::after{
-        content: url(../img/moon.png);
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        background-color: darkblue;
-        color: #ccc;
-        border-radius: 50%;
-        top: 0;
-        left: 0;
-        transform: scale(1.1);
-        transition: .3s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    &:checked::after{
-        left: 40px;
-    }
-
-}
-
-.dark-mode input:checked[type="checkbox"]::after{
-    left: 40px;
-}
-.dark-color-1{
-    background-color: #1B1D23;
-}
-.dark-color-2{
-    background-color: #ccc;
-}

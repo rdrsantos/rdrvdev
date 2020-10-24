@@ -21,22 +21,23 @@ a{
 }
 
 // cores
-$mainColor: #000666;
-$white: #F9F8F8;
+$mainColor: #0D1321;
+$white: #eee;
 $black: #222;
+$secColor: #FB3640;
 
 // fontes
 @function em($px, $con: 16){
     @return ($px / $con) * 1em;
 }
 
-@mixin mainFont($size:88) {
+@mixin mainFont($size:64) {
     font-family: 'Squada One', cursive;
     font-size: em($size); //
     text-transform: uppercase;
     color: $white;
     @include mobile{
-        font-size: 3em;
+        font-size: em(36);
     }
 }
 @mixin textFont($size:14) {
@@ -44,15 +45,15 @@ $black: #222;
     font-size: em($size);
     line-height: em(25, $size);
 }
-@mixin title($color: $black) {
+@mixin title($color: $white) {
     font-family: 'Squada One', cursive;
     font-size: em(36);
     position: relative;
-    margin: 0 auto;
     margin-bottom: 60px;
     color: $color;
     display: flex;
     justify-content: center;
+    text-align: left;
         &::after{
             content: '';
             width: 50px;
@@ -65,7 +66,7 @@ $black: #222;
 }
 
 // backgrounds
-@mixin background($padding:10px 0, $color: $white){
+@mixin background($padding:10px 0, $color: $mainColor){
     width: 100%;
     padding: $padding;
     background-color: $color;
@@ -79,7 +80,6 @@ $black: #222;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
     @include mobile{
         max-width: 100%;
         padding-left: 10px;

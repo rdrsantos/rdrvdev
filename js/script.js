@@ -82,25 +82,3 @@ if(items.length) {
 }
 //Animações
 
-//dark mode
-
-function darkMode(checkbox, elemento, cor){
-    checkbox = document.querySelector(`.${checkbox}`)
-    elemento = document.querySelector(`.${elemento}`)
-    cor = cor
-    
-    checkbox.addEventListener('change', () => {
-        elemento.classList.toggle(cor)
-        elemento.style.borderColor = `${cor}`
-    })
-}
-darkMode('check-dark', 'header', 'dark-color-1')
-darkMode('check-dark', 'intro', 'dark-color-1')
-darkMode('check-dark', 'sobre', 'dark-color-2')
-darkMode('check-dark', 'tecnologias', 'dark-color-1')
-darkMode('check-dark', 'projetos', 'dark-color-2')
-darkMode('check-dark', 'contato', 'dark-color-1')
-
-for(let i = 0; i <= 5; i++){
-    darkMode('check-dark', `projetos .pjt-${i}`, 'dark-color-1')
-}
